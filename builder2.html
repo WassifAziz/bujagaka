@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>HTML Builder</title>
+
+
+        <!--<link rel="stylesheet" type="text/css" href="css/styles.css">-->
+
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="css/jquery-te-1.4.0.css" rel="stylesheet" type="text/css">
+
+        <link href="css/trumbowyg.css" rel="stylesheet" type="text/css">
+
+        <!--    <link rel="stylesheet" type="text/css" href="/css/result-light.css">-->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <link rel="stylesheet" type="text/css" href="css/multiple-select.css">
+
+        <link rel="stylesheet" type="text/css" href="css/froala_page.css">
+        <link rel="stylesheet" type="text/css" href="css/froala_editor.css">
+
+        <style type='text/css'>
+            .body {
+                background: #666!important;
+                background-color: #666!important;
+            }
+            .sortable {
+                height: 300px;
+                background: #ccc;
+                overflow: auto;
+            }
+            .toggle {
+                background: green;
+                margin: 3px 0 0 0;
+            }
+            #droparea {
+                float: right;
+                background: white;
+                min-height: 440px;
+            }
+            #draggable {
+                float: left;
+            }
+            <!--inline edit css--> .ui-state-hover {
+                background-color: #ffC
+            }
+            .inlineEdit-placeholder {
+                font-style: italic;
+                color: #555;
+            }
+        </style>
+
+    </head>
+
+
+
+    <body>
+
+        <div id="wrapper">
+
+
+            <div id="Remove"></div>
+
+
+
+            <section id="Tools">
+
+                <button id="Action">Test HTML</button>
+
+                <button id="Target">Add</button>
+
+                <button id="Result">Result me</button>
+
+                <button id="addSpace">Add Spacer table</button>
+
+                <div class="editorTest"></div>
+
+                <select multiple="multiple" id="select_class">       
+                    <option value="WF">full width</option> 
+                    <option value="hide">hide</option>
+                </select>
+                
+                
+<!--
+                <section id="editor">
+                    <div id='edit' style="margin-top: 30px;">
+                        <img src="../img/cute_cat.jpg" alt="Cute cat" width="300" style="float: left; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;"/>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis diam in odio iaculis blandit. Nunc eu mauris sit amet purus viverra gravida ut a dui. Vivamus nec rutrum augue, pharetra faucibus purus. Maecenas non orci sagittis, vehicula lorem et, dignissim nunc. Suspendisse suscipit, diam non varius facilisis, enim libero tincidunt magna, sit amet iaculis eros libero sit amet eros. Vestibulum a rhoncus felis. Nam lacus nulla, consequat ac lacus sit amet, accumsan pellentesque risus. Aenean viverra mi at urna mattis fermentum. Curabitur porta metus in tortor elementum, in semper nulla ullamcorper. Vestibulum mattis tempor tortor quis gravida. In rhoncus risus nibh. Nullam condimentum dapibus massa vel fringilla. Sed hendrerit sed est quis facilisis. Ut sit amet nibh sem. Pellentesque imperdiet mollis libero.</p>
+
+                        <p><a href="http://google.com" title="Aenean sed hendrerit">Aenean sed hendrerit</a> velit. Nullam eu mi dolor. Maecenas et erat risus. Nulla ac auctor diam, non aliquet ante. Fusce ullamcorper, ipsum id tempor lacinia, sem tellus malesuada libero, quis ornare sem massa in orci. Sed dictum dictum tristique. Proin eros turpis, ultricies eu sapien eget, ornare rutrum ipsum. Pellentesque eros nisl, ornare nec ipsum sed, aliquet sollicitudin erat. Nulla tincidunt porta vehicula.</p>
+
+                        <p>Nullam laoreet imperdiet orci ac euismod. Curabitur vel lectus nisi. Phasellus accumsan aliquet augue, eu rutrum tellus iaculis in. Nunc viverra ultrices mollis. Curabitur malesuada nunc massa, ut imperdiet arcu lobortis sed. Cras ac arcu mauris. Maecenas id lectus nisl. Donec consectetur scelerisque quam at ultricies. Nam quis magna iaculis, condimentum metus ut, elementum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus id tempus nisi.</p>
+                    </div>
+                </section>
+-->
+
+
+                <div id="Thumbs">
+
+                    <!--Thumbnail images used in the builder-->
+                    <img src="thumbnails/nw_rbs_thumbs01.gif" title="message" />
+                    <img src="thumbnails/nw_rbs_thumbs02.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs03.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs04.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs05.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs06.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs07.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs08.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs09.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs10.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs11.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs12.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs13.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs14.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs15.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs16.gif" title="header" />
+                    <img src="thumbnails/nw_rbs_thumbs17.gif" title="header" />
+
+                </div>
+
+
+            </section>
+
+
+
+            <section id="Render">
+
+
+                <div id="Compose">
+
+
+                    <table cellpadding="0" cellspacing="0" border="0" width="620" align="center" style="background-color: #ffffff; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 620px;" bgcolor="#FFFFFF" id="myTable">
+
+                        <tbody></tbody>
+
+                    </table>
+
+
+                </div>
+
+
+
+                <div id="Final">
+
+                    <table class="Result"></table>
+
+                </div>
+
+
+
+
+            </section>
+
+
+
+            <div class="clear"></div>
+            <!--Load email mothership-->
+            <section id="loadHere" style="height:0px;"></section>
+
+
+            <table id="spacerTr">
+                <tr class="spacer_tr">
+                    <td align="left" valign="top" height="15" style="font-size: 1px; line-height:1px;">
+                        <img src="img/spacer.gif" width="1" height="15" style="-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none;">
+                    </td>
+                </tr>
+            </table>
+
+            <section id="outputimages"></section>
+
+        </div>
+    </body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <!--    <script type="text/javascript" src="js/jquery.inlineedit.js"></script>-->
+
+
+    <!--<script type="text/javascript" src="js/jquery-te-1.4.0.js"></script>-->
+
+    
+    <!--<script type="text/javascript" src="js/font_family.min.js"></script>-->
+
+    <script type="text/javascript" src="js/set.js"></script>
+    <script type="text/javascript" src="js/jquery.markitup.js"></script>
+
+    <script type="text/javascript" src="js/jquery.multiple.select.js"></script>
+
+    <!--    <script type="text/javascript" src="js/trumbowyg.js"></script>-->
+
+
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    
+    <script type="text/javascript" src="js/froala_editor.min.js"></script>
+    <script>
+        //var imageTarget = ;
+
+
+        /*$('#Action').on('click', function() {
+        console.log(allTrs[4]);
+    });*/
+
+
+
+
+
+        /*$('#snapTable > tbody').children('tr').each(function() {
+        html2canvas($(this), {
+            onrendered: function(canvas) {
+                // canvas is the final rendered <canvas> element
+                var myImage = canvas.toDataURL("image/png");
+                $('#outputimages').append('<img style="display:block; width:700px;" src="' + myImage + '"/>');
+            }
+        });
+    });*/
+
+
+
+        /////////////////////////////////////////////////////////////////
+
+        /*var m = 0;
+
+    var n = 0;
+
+
+    function nextStep() {
+        m++;
+        if (m >= 19) return;
+        // some body
+        allTrs.each(function() {
+            html2canvas($(this), {
+                onrendered: function(canvas) {
+                    // canvas is the final rendered <canvas> element
+
+                    n = n + 1;
+
+                    var myImage = canvas.toDataURL("image/png");
+                    $('#outputimages').append('<img style="display:block; width:700px;" src="' + myImage + '" class="' + n + '" />');
+                    nextStep();
+                }
+            });
+        });
+    }
+    nextStep();*/
+
+
+        //$('#myTable tbody > tr').sortable();
+
+        $('#myTable > tbody').sortable();
+        //    $('#select_class').multipleSelect();
+        //$('#myTable > tbody').trumbowyg();
+
+
+
+        $('#select_class').multipleSelect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+
+    
+    
+    
+
+    <script type="text/javascript" src="js/builder2.js"></script>
+
+</html>
+
+
+
+
+
+

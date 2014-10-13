@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>HTML Builder</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--    <script type="text/javascript" src="js/jquery.inlineedit.js"></script>-->
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/builder.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--    <link rel="stylesheet" type="text/css" href="/css/result-light.css">-->
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <style type='text/css'>
+        body {
+            margin: 100px;
+        }
+        .sortable {
+            height: 300px;
+            background: #ccc;
+            overflow: auto;
+        }
+        .toggle {
+            background: green;
+            margin: 3px 0 0 0;
+        }
+        #droparea {
+            float: right;
+        }
+        #draggable {
+            float: left;
+        }
+        <!--inline edit css--> .ui-state-hover {
+            background-color: #ffC
+        }
+        .inlineEdit-placeholder {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+
+
+        <div id="toolpanel-container">
+
+            <div id="toolpanel">
+                <span class="section-text block">Block Elements</span>
+                <span class="section-text styles">Styles</span>
+            </div>
+
+            <div class="popout-menu block">
+                <h2>Blocks</h2>
+
+                <h3>Buttons</h3>
+
+                <img class="WC_buttons black" src="images/white_company/buttons/button_black.jpg">
+
+
+
+
+            </div>
+
+            <div class="popout-menu styles">
+                <h2>Styles</h2>
+
+
+                <h3>Font styles</h3>
+
+                <span>Font size</span>
+                <div id="slider"></div>
+                <input type="text" id="font_size" />
+                <br>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+        <div id="droparea">
+
+            <table border="0" cellspacing="0" cellpadding="0" class="table main_container_table main_content" bgcolor="#ffffff" width="500" id="email_table">
+
+                <tr>
+                    <td colspan="3" align="left" valign="top">
+                        <table cellpadding="0" cellspacing="0" border="0" width="700" class="wf w90" align="center">
+                            <tr>
+                                <td width="70%" align="left" style="font-family: sans-serif; font-size:10px; color: #3a3a3a; padding: 10px 0; text-align:center;">20% off exclusive weekend treat
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" align="center" valign="top">
+                        <a href="http://www.thewhitecompany.com/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=TWC_Logo&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-TWC_Logo" target="_blank">
+                            <img src="images/WC_saleShop_1.jpg" width="247" height="52" alt="The White Company" style="display:block; margin:0 auto;" border="0" />
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 1px 0 0 0">
+                        <table cellpadding="0" cellspacing="0" border="0" width="700" style="font-family: 'Helvetica Neue', sans-serif; font-size: 12px; text-transform: uppercase; border-top:1px solid #b2b2b2; border-bottom:1px solid #b2b2b2;" class="wf">
+                            <tr class="wr" align="center">
+                                <td width="25" height="26" class="trmobile2"></td>
+                                <td align="center" class="wf wr fl" width="117" height="30">
+                                    <a href="http://www.thewhitecompany.com/clothing/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=Clothing_top_nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-Clothing_top_nav" target="_blank" style="display:block; color: #2a2a2a; text-decoration: none">CLOTHING</a>
+                                </td>
+                                <td align="center" class="wf wr fl" width="90" height="30">
+                                    <a href="http://www.thewhitecompany.com/home/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=home_top_nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-home_top_nav" target="_blank" style="display:block; color: #2a2a2a; text-decoration: none">HOME</a>
+                                </td>
+                                <td align="center" class="wf wr fl" width="208" height="30">
+                                    <a href="http://www.thewhitecompany.com/the-little-white-company/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=LWC_top_nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-LWC_top_nav" target="_blank" style="display:block; color: #2a2a2a; text-decoration: none">THE LITTLE WHITE COMPANY</a>
+                                </td>
+                                <td align="center" class="wf wr fl" width="115" height="30">
+                                    <a href="http://www.thewhitecompany.com/general-store/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=gs_top_nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-gs_top_nav" target="_blank" style="display:block; color: #2a2a2a; text-decoration: none">GENERAL STORE</a>
+                                </td>
+                                <td align="center" class="wf wr fl" width="115" height="30">
+                                    <a href="http://www.thewhitecompany.com/offers/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=Offers_top_nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-Offers_top_nav" target="_blank" style="display:block; color: #2a2a2a; text-decoration: none">OFFERS</a>
+                                </td>
+                                <td width="25" height="26" class="trmobile"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" valign="top" style="font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 1px; line-height:1px; color:#231f20;" class="h30" height="30">&nbsp;</td>
+                </tr>
+
+                <!---DONT TOUCH THIS ROW----------------->
+                <tr class="main_row editable">
+                    <td bgcolor="#FFFFFF" class="main_column sortable" id=""></td>
+                </tr>
+                <!---DONT TOUCH THIS ROW----------------->
+
+                <tr>
+                    <td colspan="3" height="30" align="center" valign="top" style="text-transform: uppercase; font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 17px; color:#000001;">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" align="center" valign="top">
+                        <table bgcolor="#fafafa" width="640" border="0" cellspacing="0" cellpadding="0" class="wf" align="center" style="border-top: 2px #acacac solid; border-bottom: 2px #acacac solid;">
+                            <tr>
+                                <td colspan="5" align="center" valign="top" height="30">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="center" valign="top">
+                                    <a href="http://www.thewhitecompany.com/help/contact-us/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=4-reasons&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-4-reasons" target="_blank" style="color: #000000; text-decoration: none; display: block; font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 30px; line-height: 30px;">
+
+                                        <i>4 reasons why shopping with us is easy</i>
+
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="center" valign="top" height="30">&nbsp;</td>
+                            </tr>
+                            <tr class="wr" align="center">
+                                <td align="left" class="width10 wr fl" width="110">
+                                    <img src="images/spacer.gif" class="wf" width="110" height="10" alt="" style="display: block; border: 0">
+                                </td>
+                                <td align="center" class="wf wr fl" width="210">
+                                    <table cellpadding="0" cellspacing="0" border="0" width="210">
+                                        <tr>
+                                            <td align="center" class="width50 wr fl" width="105">
+                                                <a href="http://www.thewhitecompany.com/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=online-and-mobile-icon&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-online-and-mobile-icon" target="_blank" style="text-decoration:none;color:#2a2a2a;font-family:'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a;">
+                                                    <img src="images/WC_saleShop_33.jpg" alt="" height="35" width="35" style="display: block; border: 0;width:40px !important;height:40px !important;">
+                                                    <br>
+                                                    <span style="text-transform:uppercase;"><strong>Online<br>&amp; Mobile</strong></span>
+                                                    <br>
+                                                    <br>Shop
+                                                    <br>on-the-go
+                                                </a>
+                                            </td>
+                                            <td align="center" class="width50 wr fl" width="105">
+                                                <a href="http://www.thewhitecompany.com/help/contact-us/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=contact-centre-icon&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-contact-centre-icon" target="_blank" style="text-decoration:none;color:#2a2a2a;font-family:'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a;">
+                                                    <img src="images/WC_saleShop_34.jpg" alt="" style="display: block; border: 0;width:40px !important;height:40px !important;" height="35" width="36">
+                                                    <br>
+                                                    <span style="text-transform:uppercase;"><strong>Contact<br>centre</strong></span>
+                                                    <br>
+                                                    <br>Helpful expert
+                                                    <br>advice
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" class="trmobile wr fl" width="0">
+                                    <img src="images/spacer.gif" class="trmobile" width="0" height="0" alt="" style="display: block; border: 0">
+                                </td>
+                                <td align="center" class="wf wr fl" width="210">
+                                    <table cellpadding="0" cellspacing="0" border="0" width="210">
+                                        <tr>
+                                            <td align="center" class="width50 wr fl" width="105">
+                                                <a href="http://www.thewhitecompany.com/stores?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=beautiful-stores-icon&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-beautiful-stores-icon" target="_blank" style="text-decoration:none;color:#2a2a2a;font-family:'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a;">
+                                                    <img src="images/WC_saleShop_35.jpg" alt="" style="display: block; border: 0;width:40px !important;height:40px !important;" height="35" width="35">
+                                                    <br>
+                                                    <span style="text-transform:uppercase;"><strong>Beautiful<br>stores</strong></span>
+                                                    <br>
+                                                    <br>Browse at
+                                                    <br>your leisure
+                                                </a>
+                                            </td>
+                                            <td align="center" class="width50 wr fl" width="105">
+                                                <a href="http://www.thewhitecompany.com/gifts/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=gift-service-icon&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-gift-service-icon" target="_blank" style="text-decoration:none;color:#2a2a2a;font-family:'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a;">
+                                                    <img src="images/WC_saleShop_36.jpg" alt="" style="display: block; border: 0;width:40px !important;height:40px !important;" height="35" width="34">
+                                                    <br>
+                                                    <span style="text-transform:uppercase;"><strong>Gift<br>service</strong></span>
+                                                    <br>
+                                                    <br>Make someone
+                                                    <br>feel special
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" class="width10 wr fl" width="110">
+                                    <img src="images/spacer.gif" class="wf" width="110" height="10" alt="" style="display: block; border: 0">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="center" valign="top" height="50">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="center" valign="top" height="50">
+                                    <a href="http://www.thewhitecompany.com/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=explore&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-explore" target="_blank">
+                                        <img src="images/exploreOurWorld.gif" width="243" height="53" alt="Explore our world" style="display: block; margin: 0 auto;" border="0" />
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="center" valign="top" height="30">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="center" valign="top">
+                                    <table width="475" border="0" cellspacing="0" cellpadding="0" align="center" class="wf">
+                                        <tr>
+                                            <td align="left" valign="middle" style="border-right: 1px #000000 solid;" width="250" class="db wf tac bn"><a href="http://blog.thewhitecompany.com/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=try_it&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-try_it" target="_blank" style="color: #000000; text-decoration: none; display: block; font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 25px; line-height: 30px;">Try it, love it, share it</a>
+                                            </td>
+                                            <td align="right" valign="middle" class="db wf mtop20">
+                                                <table cellpadding="0" cellspacing="0" border="0" height="37" width="200" class="mauto">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="https://www.facebook.com/pages/The-White-Company/149351058558082?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=facebook&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-facebook" target="_blank">
+                                                                <img src="images/social_57.png" alt="Like us on Facebook" style="display: block; border: 0; width: 25px !important; height: 31px; important" width="25" height="31" border="0">
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://twitter.com/TheWhiteCompany?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=twitter&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-twitter" target="_blank">
+                                                                <img src="images/social_59.png" alt="Follow us on Twitter" style="display: block; border: 0; width: 37px !important; height: 31px; important" width="37" height="31" border="0">
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://plus.google.com/102516932233547451422/posts?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=googleplus&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-googleplus" target="_blank">
+                                                                <img src="images/social_61.png" alt="Add us on Google+" style="display: block; border: 0; width: 37px !important; height: 31px; important" width="37" height="31" border="0">
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="http://pinterest.com/thewhitecompany/boards/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=pinterest&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-pinterest" target="_blank">
+                                                                <img src="images/social_63.png" alt="Pin us on Pinterest" style="display: block; border: 0; width: 32px !important; height: 31px; important" width="32" height="31" border="0">
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="http://instagram.com/thewhitecompany#?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=instagram&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-instagram" target="_blank">
+                                                                <img src="images/social_65.png" alt="Tag us on Instagram" style="display: block; border: 0; width: 32px !important; height: 31px; important" width="32" height="31" border="0">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="center" valign="top" height="30">&nbsp;</td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" align="left" valign="top">
+                        <img src="images/spacer.gif" width="1" height="25" alt="" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" align="center">
+                        <table cellpadding="0" cellspacing="0" border="0" width="700" class="wf">
+                            <tr class="wr" align="center">
+                                <td align="center" class="wf wr fl lc">
+                                    <table cellpadding="0" cellspacing="0" border="0" width="194" class="wf">
+                                        <tr>
+                                            <td class="lc wf" width="224" align="center" style="font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 18px; line-height: 22px; color: #2a2a2a; text-decoration: none; display:block; font-style: italic">
+                                                <a href="http://www.thewhitecompany.com/stores?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=your-store&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-your-store" target="_blank" style="font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; color: #2a2a2a; text-decoration: none; display:block; font-style: italic">Your Store</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" class="wf" style="line-height:1px;font-size:1px;">
+                                                <img src="images/WC_saleShop_42.jpg" alt="" style="display: block; border: 0" width="222" height="11" class="img_mob">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/clothing/?0&?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=clothing-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-clothing-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Clothing</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/home/?0&?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=home-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-home-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Home</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/the-little-white-company/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=LWC-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-LWC-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">The Little White Company</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" class="wf" style="line-height:1px;font-size:1px;">
+                                                <img src="images/WC_saleShop_42.jpg" alt="" style="display: block; border: 0" width="222" height="11" class="img_mob">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" class="hidden" width="14">
+                                    <img src="images/spacer.gif" width="14" height="20" alt="" style="display: block; border: 0" class="hidden">
+                                </td>
+                                <td align="center" class="hidden">
+                                    <table cellpadding="0" cellspacing="0" border="0" width="224" class="wf hide">
+                                        <tr>
+                                            <td class="lc wf" align="center" style="font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 18px; line-height: 22px; color: #2a2a2a; text-decoration: none; display:block; font-style: italic">
+                                                <a href="http://www.thewhitecompany.com/gifts/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=gifting-services&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-gifting-services" target="_blank" style="font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; color: #2a2a2a; text-decoration: none; display:block; font-style: italic">Gifting Services</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" class="wf" style="line-height:1px;font-size:1px;">
+                                                <img src="images/WC_saleShop_42.jpg" alt="" style="display: block; border: 0" width="222" height="11" class="img_mob">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/gifts/gift-vouchers/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=gift-vouchers-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-gift-vouchers-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Gift Vouchers</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/help/gift-wrap/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=gift-services-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-gift-services-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Gift Service</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/gifts/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=gift-finder-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-gift-finder-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Gift Finder</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" class="wf" style="line-height:1px;font-size:1px;">
+                                                <img src="images/WC_saleShop_42.jpg" alt="" style="display: block; border: 0" width="222" height="11" class="img_mob">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" class="hidden" width="14">
+                                    <img src="images/spacer.gif" width="14" height="20" alt="" style="display: block; border: 0" class="hidden">
+                                </td>
+                                <td align="center" class="hidden">
+                                    <table cellpadding="0" cellspacing="0" border="0" width="224" class="wf hide">
+                                        <tr>
+                                            <td class="lc wf" align="center" style="font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size: 18px; line-height: 22px; color: #2a2a2a; text-decoration: none; display:block; font-style: italic">
+                                                <a href="http://www.thewhitecompany.com/help/contact-us/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=Contact-us&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-Contact-us" target="_blank" style="font-family: Times New Roman, 'Times New Roman', Times, Baskerville, Georgia, serif; color: #2a2a2a; text-decoration: none; display:block; font-style: italic">Contact us</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" class="wf" style="line-height:1px;font-size:1px;">
+                                                <img src="images/WC_saleShop_42.jpg" alt="" style="display: block; border: 0" width="222" height="11" class="img_mob">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/stores?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=Store-Information-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-Store-Information-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Store Information</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/brochure-request/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=Request-a-brochure-bottom-nav&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-Request-a-brochure-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Request a brochure</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25" align="center" class="wf lc">
+                                                <a href="http://www.thewhitecompany.com/help/delivery-information/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=Delivery-bottom-nav &CM_MMC=Email-_-DD_SEPT11-_-HTML-_-Delivery-bottom-nav" target="_blank" style="font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 18px; color: #2a2a2a; text-decoration: none; display:block;">Delivery</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" class="wf" style="line-height:1px;font-size:1px;">
+                                                <img src="images/WC_saleShop_42.jpg" alt="" style="display: block; border: 0" width="222" height="11" class="img_mob">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" border="0" width="700" class="wf">
+                            <tbody>
+                                <tr>
+                                    <td width="20" class="width10"></td>
+                                    <td width="660" class="width580" align="left" style="font-family: sans-serif; font-size:10px; color: #3a3a3a; line-height: 15px; padding: 20px 0">
+                                        Terms &amp; Conditions:
+                                        <br />
+                                        <br />
+                                        <!-- DYNAMIC TERMS START -->
+
+                                        <!-- DYNAMIC TERMS END -->
+
+                                        <br />
+                                        <br />Problems viewing this email? <a href="[VIEW_ONLINE_HTML]" target="_blank" style="color:#484848; text-decoration:underline;">View in browser</a>
+                                        <br>
+                                        <br>Shopping Code: XXXXX
+                                        <br />
+                                        <br />For full terms and conditions please
+                                        <a href="http://www.thewhitecompany.com/help/terms/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=terms&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-terms" target="_blank" style="color: #3a3a3a; text-decoration:underline;">click here</a>
+                                        .
+                                        <br>
+                                        <br>To view our privacy policy please
+                                        <a href="http://www.thewhitecompany.com/help/privacy-policy/?ProGrpCode=A1**S&utm_source=Email&utm_medium=DD_SEPT11&utm_campaign=privacy&CM_MMC=Email-_-DD_SEPT11-_-HTML-_-privacy" target="_blank" style="color: #3a3a3a; text-decoration:underline;">click here</a>
+                                        .
+                                        <br>
+                                        <br>To ensure you receive our messages (and they don't go to your junk email folder), please add
+                                        <a style="color: #1a1a1a; text-decoration:underline;" href="mailto:thewhitecompany@email.thewhitecompany.com">thewhitecompany@email.thewhitecompany.com</a>
+                                        to your address book.
+                                        <br>
+                                        <br>The White Company (UK) Ltd, 1 Derry Street, London, W8 5HY. Company Registration Number 2998082
+                                        <br>
+                                        <br>You're receiving this email because you subscribed to our mailing list. To stop receiving these emails
+                                        <a style="color: #1a1a1a; text-decoration:underline;" href="http://preferences.thewhitecompany.com/?ProGrpCode=Z1M01&utm_source=Email&utm_medium=secret-discount-25july&utm_campaign=Unsubscribe&CM_MMC=Email-_-secret-discount-25july-_-HTML-_-Unsubscribe" target="_blank">unsubscribe here</a>
+                                        . Please allow up to 21 days to stop receiving our emails completely.
+                                    </td>
+                                    <td width="20" class="width10"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+
+
+            </table>
+
+        </div>
+
+    </div>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+<!--jquery
+var htmlTable = $('#droparea').html();
+$.post('/download.php', {'html': htmlTable },function(response){
+  $('#result').html("The file should be downloading now"); 
+});
+--<
+
+<--html
+<input type="submit" value="DOWNLOAD" />
+-->
+
